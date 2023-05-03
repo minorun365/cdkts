@@ -15,8 +15,8 @@ class Person {
 class Teacher extends Person {
     subject: string;
 
-    constructor(subject: string) {
-        super();
+    constructor(subject: string, firstName?: string, lastName?: string) {
+        super(firstName, lastName);
         this.subject = subject;
     }
 
@@ -25,6 +25,6 @@ class Teacher extends Person {
     }
 }
 
-const hanako = new Teacher("国語");
+const hanako = new Teacher("国語", "花子", "山田");
 
 hanako.greet();
